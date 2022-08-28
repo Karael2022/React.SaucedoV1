@@ -30,7 +30,7 @@ function Navbar() {
   </div>
   <CartWidget counter ={5}/>
 </nav>
-        <h1> Feliz dia del niño.jsx</h1>
+        <h1> Catalogo</h1>
         </>
 
     )
