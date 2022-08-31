@@ -6,7 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
-import {reloj} from '../imagenes/reloj.jpg';
+import reloj from '../imagenes/reloj.jpg';
+import App from '../App';
+
+
 
 export default function ItemCount({stock, initial, onAdd}) {
   const [counter, setCounter] = useState(initial);
@@ -27,17 +30,18 @@ export default function ItemCount({stock, initial, onAdd}) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className='card' sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         alt="Gtr3"
         height="140"
-        image='reloj'
-        src='reloj'
+        width= "10"
+        image={reloj}
+        src={reloj}
         
 
       />
-      <CardContent>
+      <CardContent >
         <Typography gutterBottom variant="h5" component="div">
           Amazfit GTR 3i
         </Typography>

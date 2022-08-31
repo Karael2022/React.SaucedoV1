@@ -1,17 +1,27 @@
 //snipper rface
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { CustomFetch } from './CustomFetch'
+import ItemList from './ItemList'
+import Productos from './Productos'
 
-const ItemListConteiner = (props) => {
-    //console.log(props)
-    //const{saludo,greeting} = props si lo hago asi debo quitar los props de <p>
+const ItemListConteiner = (greeting) => {
+      const[ListProductos, setListProductos] = useState([]) 
+      
+      
+  useEffect(()=> {
+    CustomFetch(Productos)
+    .then(data => setListProductos(data))
+  },[])
+  console.log(ListProductos)
+    //.catch()
+    //.finally()
+  
   return (
-    <div>
-        <p>{props.saludo}</p>
-        <p>{props.greeting}</p>
-    </div>
-  )//se centra la logica en un solo lugar
-}
+    <>
+      <ItemList ListProductos={ListProductos}/>
+      <div>{greeting}</div>
+    </>
+  )}
 
 export default ItemListConteiner
 
-//si quiero sacar propiedades de 1obj{} si es de un array []

@@ -5,9 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ItemListConteiner from './Components/ItemListConteiner';
 import NavBarMui from './Components/NavBarMui';
-import Producto from './Components/Producto';
+import Producto from './Components/Clases/Producto';
 import ImgMediaCard from './Components/ItemCount';
 import ItemCount from './Components/ItemCount';
+import Fetch from './Components/Clases/Fetch';
+
 
 let producto1 = {id:1, name: "Flores1",price: 100, quantity:10};
 let producto2 = {id:2, name: "Flores2",price: 150, quantity:15};
@@ -24,12 +26,11 @@ function App() {
     <>
     <NavBarMui/>
     <Navbar/>
-    {/*<Producto item={producto1}/>*/}
     <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-    {/*<Producto item={producto2}/>*/}
-    <h3>Mi proyecto</h3>
     <ItemListConteiner saludo={saludo} greeting='Hola como estas?'/> 
-    
+    {/*<Producto item={producto2}/>*/}
+    {/*<Producto item={producto1}/>*/}
+    <h3>Mi proyecto</h3>
     </>
   );
 }

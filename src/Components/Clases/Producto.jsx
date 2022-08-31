@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ItemListConteiner from './ItemListConteiner';
+import ItemListConteiner from '../ItemListConteiner';
 
 
 
