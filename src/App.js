@@ -18,16 +18,16 @@ let producto3 = {id:3, name: "Flores3",price: 200, quantity:20};
 
 function App() {
   //toda la logica va antes del return. Luego de declarar el componente
-  const saludo = 'hola'
+  
   const onAdd = () => {
-    console.log('Compraste')
+ 
   }
   return (
     <>
     <NavBarMui/>
     <Navbar/>
     <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-    <ItemListConteiner saludo={saludo} greeting='Hola como estas?'/> 
+    <ItemListConteiner/> 
     {/*<Producto item={producto2}/>*/}
     {/*<Producto item={producto1}/>*/}
     <h3>Mi proyecto</h3>

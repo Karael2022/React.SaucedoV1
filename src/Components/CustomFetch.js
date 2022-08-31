@@ -3,10 +3,10 @@ import React, {useEffect, useState } from 'react'
 import ItemList from './ItemList'
 
 
-export const CustomFetch = (ListProductos) => {
+export const CustomFetch = (Productos) => {
     return new Promise ((resolve,reject)=>{
         setTimeout(() => {
-            resolve(ListProductos)
+            resolve(Productos)
     },3000)
     
          

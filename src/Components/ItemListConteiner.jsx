@@ -4,7 +4,7 @@ import { CustomFetch } from './CustomFetch'
 import ItemList from './ItemList'
 import Productos from './Productos'
 
-const ItemListConteiner = (greeting) => {
+const ItemListConteiner = (catalogo) => {
       const[ListProductos, setListProductos] = useState([]) 
       
       
@@ -19,7 +19,7 @@ const ItemListConteiner = (greeting) => {
   return (
     <>
       <ItemList ListProductos={ListProductos}/>
-      <div>{greeting}</div>
+      
     </>
   )}
 

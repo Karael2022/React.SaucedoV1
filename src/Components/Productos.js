@@ -4,20 +4,7 @@ import ItemListConteiner from './ItemListConteiner';
 const Productos = [
     
     {
-        id: 1,
-        Title: 'Caperucita Roja',
-        description: 'el lobo se come a la abuela',
-        price: '100',
-        pricture: 'https://static.wikia.nocookie.net/biblioteca-virtual-de-literatura/images/1/1e/Caperucita_Roja.jpg/revision/latest/scale-to-width-down/1200?cb=20180628205842&path-prefix=es'
-    
-
-    },
-    {   id: 2,
-        Title: 'Blancanieves',
-        description: 'El principe la besa y viven felices por siempre',
-        price: '150',
-        pricture: 'http://mientrasleemosaprendemos.blogspot.com/2015/09/blancanieves-y-los-siete-enanitos.html'
-
+        
     }, 
     {id:1, 
         nombre:"Xiaomi Band 6", 
