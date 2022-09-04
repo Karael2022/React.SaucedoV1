@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({productDetail}) => {
-    const {name, describe, price, stock, img}= productDetail
+    const {id, name, describe, price, stock, img}= productDetail
 
     const onAdd = () => {
         console.log('Compra Realizada')

@@ -11,7 +11,7 @@ import ItemListConteiner from './ItemListConteiner';
 
 
 const Item = ({Products}) => {
-  const{img,name, describe, price,stock,id}= Products
+  const{img,name, describe, price,stock}= Products
   return (
     <Card className='card' sx={{ maxWidth: 345 }}>
       <CardMedia

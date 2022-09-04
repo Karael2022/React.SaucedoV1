@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const Fetch = () => {
     useEffect(() => {
-        fetch('http swapi.dev/api/planets/1/')
+        fetch('https://dog.ceo/api/breeds/image/random')
         .then((res) =>res.json())
         .then((json) => console.log(json))
         .catch((e) => console.log(e))

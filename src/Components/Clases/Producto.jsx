@@ -3,7 +3,7 @@ import ItemListConteiner from '../ItemListConteiner';
 
 
 
-function Producto({item, price, quantity}){ 
+/*function Producto({item, price, quantity}){ 
   //console.log('imprimi en la pantalla el Producto1') lo comento ya no es necesario
    //let counter = 0; // variable comun
 
@@ -14,7 +14,7 @@ function Producto({item, price, quantity}){
     console.log ('creando useeffect');
    }, []); // solo 1 vez cuando se monta el componente
    
-   /*/en cada renders (vida) cambios cualquiera  
+   /en cada renders (vida) cambios cualquiera  
    useEffect (() =>{
     console.log ('mientras viva el componente');
     
@@ -38,7 +38,7 @@ function Producto({item, price, quantity}){
       console.log('fin del componente')
     } 
     
-  },[]); // fin */
+  },[]); // fin 
 
   return (
     <div>
@@ -61,4 +61,4 @@ function Producto({item, price, quantity}){
   );
 }
 
-export default Producto
+export default Producto*/
