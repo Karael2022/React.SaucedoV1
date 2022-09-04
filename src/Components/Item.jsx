@@ -7,11 +7,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemList from './ItemList';
 import ItemListConteiner from './ItemListConteiner';
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
 const Item = ({Products}) => {
-  const{img,name, describe, price,stock}= Products
+  const{id,img,name, describe, price,stock}= Products
+  const navegar = useNavigate()
   return (
     <Card className='card' sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -50,8 +52,15 @@ const Item = ({Products}) => {
         <div size="medium text">{Products.name}</div>
         <div size="small">{Products.describe}</div>
         <div size="medium" > $ {Products.price}</div>
-        
-      
+        <button className='btn btn-success' onClick={()=>navegar(`/detalle/${'id'}`)}>Agregar</button>
+      {/* Navegacion con un boton  */}
+      {/*<button className='btn btn-primary' onClick={()=>navegar(`/detalle/${id}`)}>Ver más</button>*/}
+     {/* Navegacion con un link  */}
+    {/* <Link to={`/detalle/${id}`}>Ir al detalle</Link> */}
+        {/* Navegacion con boton y link (no recomendado) */}
+        {/* <Link  to={`/detalle/${id}`}>
+          <button className='btn btn-primary'>Ver más</button> 
+        </Link> */}
         
       </div>
     </Card>

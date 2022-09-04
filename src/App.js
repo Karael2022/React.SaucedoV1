@@ -1,20 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import ItemListConteiner from './Components/ItemListConteiner';
-import NavBarMui from './Components/NavBarMui';
-import Producto from './Components/Clases/Producto';
-import ImgMediaCard from './Components/ItemCount';
-import ItemCount from './Components/ItemCount';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 import Fetch from './Components/Clases/Fetch';
-import ItemDetailConteiner from './Components/ItemDetailConteiner'
+import ItemDetailConteiner from './Components/ItemDetailConteiner';
+import ItemListConteiner from './Components/ItemListConteiner';
+import Navbar from './Components/Navbar';
+import NavBarMui from './Components/NavBarMui';
 
-
-let producto1 = {id:1, name: "Flores1",price: 100, quantity:10};
-let producto2 = {id:2, name: "Flores2",price: 150, quantity:15};
-let producto3 = {id:3, name: "Flores3",price: 200, quantity:20};
 
 
 function App() {
@@ -26,15 +18,23 @@ function App() {
   }
   return (
     <>
-    <NavBarMui/>
-    <Navbar/>
-    <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-    <ItemListConteiner/>
-    <ItemDetailConteiner/>
-    <Fetch/>
-    {/*<Producto item={producto2}/>*/}
-    {/*<Producto item={producto1}/>*/}
-    <h3>Mi proyecto</h3>
+    <BrowserRouter>
+    
+      {/*<NavBarMui/>*/}
+      <Navbar/> 
+      <Routes>
+        <Route path='/' element={ <ItemListConteiner/>}/>
+        <Route path='/category/:categoryId' element={ <ItemListConteiner saludo={saludo} greeting='hello' />}/>
+        <Route path='/detalle/:id' element={<ItemDetailConteiner/>}/>
+      </Routes>
+      {/*<ItemListConteiner/>
+      <ItemDetailConteiner/>
+      {/*<ItemCount stock={10} initial={1} onAdd={onAdd}/>*/}
+      <Fetch/>
+    
+      <h3>Mi proyecto</h3>
+
+    </BrowserRouter>
     </>
   );
 }

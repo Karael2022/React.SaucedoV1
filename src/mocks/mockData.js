@@ -1,5 +1,5 @@
     const Products =[
-      {  id:1, 
+      {  id:'1', 
         name:"Amazfit GTR 2", 
         price: 54.995,
         category: 'Amazfit',
@@ -9,7 +9,7 @@
         
     },
     {
-        id:2, 
+        id:'2', 
         name:"Amazfiz GTS 3", 
         price: 68.795,
         category: 'Amazfit',
@@ -17,7 +17,7 @@
         img:"https://stylewatch.vtexassets.com/arquivos/ids/213545/Smartwatch_Amazfit_AZAAMAGTS3TR_01.jpg?v=637886731026170000",
         stock: 5,
     },
-        {id:3,
+        {id:'3',
         name:"Garmin Vune Negro", 
         price: 122.995,
         category: 'Garmin',
@@ -27,7 +27,7 @@
         
     },
     {
-        id:4,
+        id:'4',
         name:"Garmin Venu 2S Blanco", 
         price: 139.995,
         category: 'Garmin',
@@ -40,7 +40,7 @@
 ];
   
 export const data = new Promise((resolve, reject) => {
-  //acciones
+  
   let condition = true
   setTimeout(()=> {
     if (condition){

@@ -9,11 +9,12 @@ const ItemDetail = ({productDetail}) => {
     }
     
   return (
-    <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', padding:'3rem'}}>
-        <h2>Detalle de: {name}</h2>
+    <div style={{
+      display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', padding:'3rem'}}>
+        <h2 className='display-3'>Detalle de: {name}</h2>
         <img src={img} alt={name} style={{width:'25rem'}}/>
         <p>{describe}</p>
-        <p>${price}</p>
+        <p className='text-dark'>${price}</p>
         <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
     </div>
   )
