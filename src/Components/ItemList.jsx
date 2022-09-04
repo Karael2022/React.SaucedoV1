@@ -1,19 +1,18 @@
 import React from 'react'
 import Item from './Item'
-import Productos from './Productos'
 
 
 
 
-const ItemList = ({ ListProductos }) => {
+ 
+const ItemList = ({ ListProducts }) => {
     return (
-      <section className="text-center">
-        {ListProductos.map((Productos) => {
-          return <Item 
-          key ={Productos.id}
-          Productos={Productos} />;
-        })}
+      <section 
+       className= "CardContainer">
+        {ListProducts.map((Products) => 
+         <Item key ={Products.id} Products={Products} />
+        )}
       </section>
-    );
-  };
-  export default ItemList;
+    )
+  }
+  export default ItemList

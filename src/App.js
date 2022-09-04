@@ -9,6 +9,7 @@ import Producto from './Components/Clases/Producto';
 import ImgMediaCard from './Components/ItemCount';
 import ItemCount from './Components/ItemCount';
 import Fetch from './Components/Clases/Fetch';
+import ItemDetailConteiner from './Components/ItemDetailConteiner'
 
 
 let producto1 = {id:1, name: "Flores1",price: 100, quantity:10};
@@ -17,6 +18,7 @@ let producto3 = {id:3, name: "Flores3",price: 200, quantity:20};
 
 
 function App() {
+  const saludo = 'Feliz Dia!'
   //toda la logica va antes del return. Luego de declarar el componente
   
   const onAdd = () => {
@@ -27,7 +29,9 @@ function App() {
     <NavBarMui/>
     <Navbar/>
     <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-    <ItemListConteiner/> 
+    <ItemListConteiner/>
+    <ItemDetailConteiner/>
+    <Fetch/>
     {/*<Producto item={producto2}/>*/}
     {/*<Producto item={producto1}/>*/}
     <h3>Mi proyecto</h3>

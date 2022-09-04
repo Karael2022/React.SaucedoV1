@@ -32,25 +32,16 @@ export default function ItemCount({stock, initial, onAdd}) {
   return (
     <Card className='card' sx={{ maxWidth: 345 }}>
       <CardMedia
-        component="img"
+        /*component="img"
         alt="Gtr3"
         height="140"
         width= "10"
         image={reloj}
-        src={reloj}
+        src={reloj}*/
         
 
       />
-      <CardContent >
-        <Typography gutterBottom variant="h5" component="div">
-          Amazfit GTR 3i
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        El Amazfit GTR 3 ofrece un panel enorme y muy bien cuidado que además de verse genial
-        en cualquier tipo de situación todo se ve muy nítido, vibrante y lo mejor: 
-        a un tamaño considerable.
-        </Typography>
-      </CardContent>
+      
       <div
       style={{
         padding: '1rem',

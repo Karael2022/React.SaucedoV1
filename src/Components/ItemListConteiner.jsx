@@ -1,27 +1,35 @@
 //snipper rface
 import React, {useState, useEffect} from 'react'
-import { CustomFetch } from './CustomFetch'
 import ItemList from './ItemList'
-import Productos from './Productos'
+import {data} from '../mocks/mockData'
 
-const ItemListConteiner = (catalogo) => {
-      const[ListProductos, setListProductos] = useState([]) 
-      
-      
-  useEffect(()=> {
-    CustomFetch(Productos)
-    .then(data => setListProductos(data))
-  },[])
-  console.log(ListProductos)
-    //.catch()
-    //.finally()
+
+
+const ItemListConteiner = () => {
+      const[ListProducts, setListProducts] = useState([]) 
+      const[loanding, setLoanding] = useState(false)
+
+
   
-  return (
-    <>
-      <ItemList ListProductos={ListProductos}/>
-      
-    </>
-  )}
 
+
+
+useEffect(()=>{
+  setLoanding(true)
+    data
+    .then((res)=>
+    setListProducts(res))
+    .catch((error)=> console.log(error))
+    .finally (() => setLoanding(false))
+  },[])
+
+  return (
+    <div style={{padding:'3rem'}}>
+      
+      {loanding ?<p> Cargando....</p>: <ItemList ListProducts={ListProducts}/>}
+    </div>
+   )
+}
 export default ItemListConteiner
 
+  // mok es una simulacion

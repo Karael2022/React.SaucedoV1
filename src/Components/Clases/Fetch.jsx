@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const Fetch = () => {
     useEffect(() => {
-        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+        fetch('http swapi.dev/api/planets/1/')
         .then((res) =>res.json())
         .then((json) => console.log(json))
         .catch((e) => console.log(e))
