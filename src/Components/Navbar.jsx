@@ -22,9 +22,9 @@ function Navbar() {
         <li className="nav-item">    
           <NavLink className="nav-link" to='/category/Garmin'>Garmin</NavLink>
         </li>
-        {/*<li className="nav-item">
+        <li className="nav-item">
           <NavLink className="nav-link" to='/category/Xiaomi'>Xiaomi</NavLink>
-    </li>*/}
+    </li>
         
       </ul>
       

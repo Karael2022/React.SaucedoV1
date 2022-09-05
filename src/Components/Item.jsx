@@ -21,6 +21,7 @@ const Item = ({Products}) => {
         alt="reloj"
         height="180"
         width= "150"
+        paddingbottom= '5rem'
         img={Products.img}
         src={Products.img}
         
@@ -37,22 +38,23 @@ const Item = ({Products}) => {
       }}>
       
       
-      </div>
+    </div>
       <div
       style={{
-        marginBlockEnd:'1rem',
-        marginInlineEnd:'0rem',
+        /*marginBlockEnd:'1rem',
+        marginInlineEnd:'0rem',*/
         padding: '1rem',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems:'center',
+        
       }}>
         
         <div size="medium text">{Products.name}</div>
         <div size="small">{Products.describe}</div>
         <div size="medium" > $ {Products.price}</div>
-        <button className='btn btn-success' onClick={()=>navegar(`/detalle/${'id'}`)}>Agregar</button>
+        <button className='btn btn-success' onClick={()=>navegar(`/detalle/${id}`)}>Agregar</button>
       {/* Navegacion con un boton  */}
       {/*<button className='btn btn-primary' onClick={()=>navegar(`/detalle/${id}`)}>Ver más</button>*/}
      {/* Navegacion con un link  */}

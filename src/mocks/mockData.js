@@ -36,7 +36,47 @@
         stock: 5,
         
     },
+    {
+      id:'5',
+      name:"Xiaomi Mi Watch Negro", 
+      price: 52.995,
+      category: 'Xiaomi',
+      describe:'Con un diseño delgado y ligero, luce radiante durante todo el día sin ni siquiera notarlo.Te olvidarás de que llevas un reloj.',
+      img:"https://stylewatch.vtexassets.com/arquivos/ids/199383/smartwatch-xiaomi-mi-watch-negro_XIWATCHBK_1.jpg?v=637687188967630000",
+      stock: 5,
+      
+  },
+  {
+    id:'6',
+    name:"Xiaomi Watch S1 Active GL Moon White", 
+    price: 73.995,
+    category: 'Xiaomi',
+    describe:'Garmin Venu 2S Cuando llevas una vida sana, vives mejor. Este smartwatch con GPS cuenta con funciones de control de la salud y de ejercicio avanzadas.',
+    img:"https://stylewatch.vtexassets.com/arquivos/ids/213564/Smartwatch-Xiaomi-XIWS1ACW_01.jpg?v=637886734608870000",
+    stock: 5,
     
+},
+{
+  id:'7',
+  name:"Garmin Venu 2S Blanco", 
+  price: 139.995,
+  category: 'Garmin',
+  describe:'Garmin Venu 2S Cuando llevas una vida sana, vives mejor. Este smartwatch con GPS cuenta con funciones de control de la salud y de ejercicio avanzadas.',
+  img:"https://stylewatch.vtexassets.com/arquivos/ids/196829/Smartwatch-Garmin-Venu-2S-Blanco-rose-GA100242913_01.jpg?v=637668985246300000",
+  stock: 5,
+  
+},
+{
+id:'8',
+name:"Garmin Venu 2S Blanco", 
+price: 139.995,
+category: 'Garmin',
+describe:'Garmin Venu 2S Cuando llevas una vida sana, vives mejor. Este smartwatch con GPS cuenta con funciones de control de la salud y de ejercicio avanzadas.',
+img:"https://stylewatch.vtexassets.com/arquivos/ids/196829/Smartwatch-Garmin-Venu-2S-Blanco-rose-GA100242913_01.jpg?v=637668985246300000",
+stock: 5,
+
+},
+
 ];
   
 export const data = new Promise((resolve, reject) => {
