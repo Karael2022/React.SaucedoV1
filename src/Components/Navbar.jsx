@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 function Navbar() {
     return (
         <>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-info">
   <div className="container-fluid">
     <NavLink className="navbar-brand" to={'/'}>Navbar</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@ function Navbar() {
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to='/category/Xiaomi'>Xiaomi</NavLink>
-    </li>
+    </li> 
         
       </ul>
       

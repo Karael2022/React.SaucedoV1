@@ -1,22 +1,31 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({productDetail}) => {
-    const {id, name, describe, price, stock, img}= productDetail
+    const [counter, setCounter] = useState(1);
+    const[compra,setCompra] = useState(false)
+    const {id, name, describe, price, stock, img}= productDetail;
+    
 
     const onAdd = () => {
-        console.log('Compra Realizada')
+        console.log(`Se agregaron ${counter} items del producto ${name}`)
+        setCompra(true)
     }
     
   return (
-    <div style={{
-      display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', padding:'3rem'}}>
+    <div style={{className:'text-danger', display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', padding:'3rem'}}>
         <h2 className='display-3'>Detalle de: {name}</h2>
         <img src={img} alt={name} style={{width:'25rem'}}/>
         <p>{describe}</p>
-        <p className='text-dark'>${price}</p>
-        <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
-    </div>
+        <p className='text-header mb-3'>${price}</p>
+        {!compra
+       ? <ItemCount stock={stock} initial={1} onAdd={onAdd} counter ={counter} setCounter={setCounter}/>
+       : <div> 
+          <button className='btn btn-primary'>Ir al carrito</button>
+         <button className='btn btn-danger mx-2'>Seguir comprando</button>
+         
+        </div>}
+      </div>
   )
 }
 
