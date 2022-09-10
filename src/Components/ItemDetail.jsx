@@ -1,10 +1,12 @@
 import React,{ useState } from 'react'
 import ItemCount from './ItemCount'
+import { useNavigate } from 'react-router-dom';
 
 const ItemDetail = ({productDetail}) => {
     const [counter, setCounter] = useState(1);
     const[compra,setCompra] = useState(false)
     const {id, name, describe, price, stock, img}= productDetail;
+    const navegar = useNavigate()
     
 
     const onAdd = () => {
@@ -21,7 +23,7 @@ const ItemDetail = ({productDetail}) => {
         {!compra
        ? <ItemCount stock={stock} initial={1} onAdd={onAdd} counter ={counter} setCounter={setCounter}/>
        : <div> 
-          <button className='btn btn-primary'>Ir al carrito</button>
+          <button className='btn btn-primary'onClick={()=>navegar('/cart')}>Ir al carrito</button>
          <button className='btn btn-danger mx-2'>Seguir comprando</button>
          
         </div>}
