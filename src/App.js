@@ -7,37 +7,41 @@ import ItemListConteiner from './Components/ItemListConteiner';
 import Navbar from './Components/Navbar';
 import NavBarMui from './Components/NavBarMui';
 import Cart from './Components/Cart';
+import { CartProvider } from './Contex/CartContex';
+
 
 
 
 function App() {
   const saludo = 'Feliz Dia!'
-  //toda la logica va antes del return. Luego de declarar el componente
-  
-  const onAdd = () => {
- 
-  }
-  return (
-    <>
-    <BrowserRouter>
     
-      {/*<NavBarMui/>*/}
-      <Navbar/> 
-      <Routes>
-        <Route path='/' element={ <ItemListConteiner/>}/>
-        <Route path='/category/:categoryId' element={ <ItemListConteiner saludo={saludo} greeting='hello' />}/>
-        <Route path='/detalle/:id' element={<ItemDetailConteiner/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-      </Routes>
-      {/*<ItemListConteiner/>
-      <ItemDetailConteiner/>
-      {/*<ItemCount stock={10} initial={1} onAdd={onAdd}/>*/}
-      <Fetch/>
-    
-      <h3>Mi proyecto</h3>
+  //const onAdd = () => {
+   //}
 
-    </BrowserRouter>
-    </>
+  return (
+    <CartProvider>
+      
+      <BrowserRouter>
+      
+        {/*<NavBarMui/>*/}
+        
+        <Navbar/> 
+        <Routes>
+          <Route path='/' element={ <ItemListConteiner/>}/>
+          <Route path='/category/:categoryId' element={ <ItemListConteiner saludo={saludo} greeting='hello' />}/>
+          <Route path='/detalle/:id' element={<ItemDetailConteiner/>}/>
+          <Route path='/cart' element={<Cart/>}/>        
+        </Routes>
+        
+        {/*<ItemListConteiner/>
+        <ItemDetailConteiner/>
+        {/*<ItemCount stock={10} initial={1} onAdd={onAdd}/>*/}
+        <Fetch/>
+        <h3>Mi proyecto</h3>
+
+      </BrowserRouter>
+    </CartProvider>
+    
   );
 }
 
