@@ -12,6 +12,7 @@ import { CartProvider } from './Contex/CartContex';
 
 
 
+
 function App() {
   const saludo = 'Feliz Dia!'
     
@@ -32,12 +33,13 @@ function App() {
           <Route path='/detalle/:id' element={<ItemDetailConteiner/>}/>
           <Route path='/cart' element={<Cart/>}/>        
         </Routes>
-        
+        <footer/>
+      
         {/*<ItemListConteiner/>
         <ItemDetailConteiner/>
         {/*<ItemCount stock={10} initial={1} onAdd={onAdd}/>*/}
-        <Fetch/>
-        <h3>Mi proyecto</h3>
+        {/*<Fetch/>
+        <h3>Mi proyecto</h3>*/}
 
       </BrowserRouter>
     </CartProvider>

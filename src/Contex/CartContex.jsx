@@ -56,12 +56,22 @@ export const CartProvider = ({children}) => {
     const isInCart = (id) => {
         return cart.some((prod)=> prod.id === id )
     }
+    const CartQuantity = ()=>{
+        return cart.reduce((acumul,prod) => acumul += prod.quantity, 0)
+    }
+    const CartTotal = () => {
+        return cart.reduce((acumul,prod)=> acumul += prod.price * prod.quantity,0)
+
+    }
 
     return(
-        <CartContext.Provider value={{cart, clear, removeItem, isInCart, addItem, /*addItem2*/  }}>
+        
+        <CartContext.Provider value={{cart, clear, removeItem, isInCart, addItem, /*addItem2*/ CartQuantity,CartTotal }}>
             {children}
-        </CartContext.Provider>
-    )
-}
+        </CartContext.Provider> 
+            
+    )}
+    
+
 
 export const useCart = () => useContext(CartContext)

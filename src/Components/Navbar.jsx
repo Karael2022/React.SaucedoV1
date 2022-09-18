@@ -1,5 +1,6 @@
 import CartWidget from "./CartWidget"
 import {NavLink} from 'react-router-dom'
+import React from "react"
 
 
 function Navbar() {
@@ -29,10 +30,12 @@ function Navbar() {
       </ul>
       
     </div>
+    <NavLink className="nav-link" to='/cart'><CartWidget/></NavLink>
   </div>
-  <CartWidget counter ={5}/>
+    
+  
 </nav>
-        <h1> Catalogo</h1>
+        {/*<h1> Catalogo</h1>*/}
         </>
 
     )
