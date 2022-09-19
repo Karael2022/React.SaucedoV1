@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useCart } from '../Contex/CartContex'
 
 
+
 const CartItem = ({compra})=> {
     const{removeItem}=useCart()
           
@@ -10,7 +11,7 @@ const CartItem = ({compra})=> {
 
   return (
     
-    <TableContainer maxWidth="fixed">
+    <TableContainer>
     
         <Table>
             <TableHead>
@@ -31,7 +32,7 @@ const CartItem = ({compra})=> {
             </TableBody>
         </Table>
     </TableContainer>
-   
+    
   );
 }
 

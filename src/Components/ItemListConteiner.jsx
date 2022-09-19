@@ -3,7 +3,8 @@ import React, {useState, useEffect} from 'react'
 import ItemList from './ItemList'
 import {data} from '../mocks/mockData'
 import { useParams } from 'react-router-dom'
-
+import {db} from '../FireBase/FireBase'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 
 const ItemListConteiner = () => {
@@ -11,8 +12,28 @@ const ItemListConteiner = () => {
       const[loanding, setLoanding] = useState(false)
       const{categoryId} = useParams()
 
-  
+//firebase
 useEffect(()=>{
+  setLoanding(true)
+  const productos = categoryId ? query(collection(db,"Products"), where("category", "==", categoryId) ) : collection(db, "Products")
+  getDocs(productos)
+  .then ((result)=>{
+    const lista = result.docs.map((Products) =>{
+      return {
+        id:Products.id,
+        ...Products.data()
+      }
+    })
+    setListProducts(lista)
+  })
+  .catch ((error) => console.log (error))
+  .finally (() => setLoanding(false))
+}, [categoryId])
+
+
+
+//este llamado se hace con mock.  
+{/*useEffect(()=>{
   setLoanding(true)
     data
     .then((res)=>{
@@ -24,7 +45,7 @@ useEffect(()=>{
     })
     .catch((error)=> console.log(error))
     .finally (() => setLoanding(false))
-  },[categoryId])
+  },[categoryId])*/}
 
   return (
     <div style={{padding:'3rem'}}>

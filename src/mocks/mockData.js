@@ -59,7 +59,7 @@
 {
   id:'7',
   name:"Amazfit GTS Negro", 
-  price: 41295,
+  price: 41.295,
   category: 'Amazfit',
   describe:'La elegante pantalla cuadrada personalizada de 1,65" ofrece un área de visualización más grande que la pantalla redonda, ya que muestra mayor contenido por lo que puede incluir más información.',
   img:"https://stylewatch.vtexassets.com/arquivos/ids/190687/Smartwatch_Amazfit_GTS_AZA1914OBK_01.jpg?v=637527074156800000",
