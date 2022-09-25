@@ -1,13 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Fetch from './Components/Clases/Fetch';
 import ItemDetailConteiner from './Components/ItemDetailConteiner';
 import ItemListConteiner from './Components/ItemListConteiner';
 import Navbar from './Components/Navbar';
-import NavBarMui from './Components/NavBarMui';
 import Cart from './Components/Cart';
 import { CartProvider } from './Contex/CartContex';
+import Comprar from './Components/Comprar';
 
 
 
@@ -31,7 +30,8 @@ function App() {
           <Route path='/' element={ <ItemListConteiner/>}/>
           <Route path='/category/:categoryId' element={ <ItemListConteiner saludo={saludo} greeting='hello' />}/>
           <Route path='/detalle/:id' element={<ItemDetailConteiner/>}/>
-          <Route path='/cart' element={<Cart/>}/>        
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/comprar' element={<Comprar/>}/>          
         </Routes>
         <footer/>
       

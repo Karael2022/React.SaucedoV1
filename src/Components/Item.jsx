@@ -11,12 +11,12 @@ const Item = ({Products}) => {
   const navegar = useNavigate()
   return (
     
-   <Card className='card' sx={{ maxWidth: 345 }}>
+   <Card className='card' sx={{ maxWidth: 341 }}>
       <CardMedia
         component='img'
         alt="reloj"
-        height="180"
-        width= "150"
+        height="286"
+        width= "100"
         img={Products.img}
         src={Products.img}
         

@@ -26,7 +26,7 @@ const Cart = () => {
             <span>Total a pagar : ${CartTotal()}</span>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'2rem'}}>
             <button className='btn btn-danger' onClick={clear}>Vaciar Carrito</button>
-            <button className='btn btn-success'>Terminar compra</button>
+            <button className='btn btn-success' onClick={() => navegar ('/Comprar')}>Terminar compra</button>
             </div>
         </div>
       }
