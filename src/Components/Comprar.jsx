@@ -4,8 +4,6 @@ import { useState } from 'react'
 import {db} from '../FireBase/FireBase'
 import { useCart } from '../Contex/CartContex'
 import { useNavigate } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const Comprar = () => {
     const [comprador, setComprador]= useState({})
@@ -73,9 +71,9 @@ const Comprar = () => {
        </div>
        :
        <div >
-        <h2 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>Muchas gracias por su compra!</h2>
+        <h2 style={{display:'flex', justifyContent:'center', alignItems:'center', paddingTop: '10px'}}>Muchas gracias por su compra!</h2>
         <h4 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>Su orden es: {orderId}</h4>
-        <button className="btn btn-success" alignItems="center" onClick={()=> navigate('/')}>Volver</button>
+        <button className="btn btn-success" justifyContent="center" onClick={()=> navigate('/')}>Volver</button>
        </div>}
     </div>
   )
@@ -85,32 +83,3 @@ export default Comprar
 
 
 
-{/*import React, { useState } from 'react'
-import Cart from './Cart';
-import { addDoc, collection, getFirestore  } from 'firebase/firestore';
-
-
-export default function Comprar() {
-    const {email, setemail} = useState('');
-    const[nombre,setNombre] = useState('');
-    const [tel,setTel] = useState('');
-    function Compra (){
-       console.log(email,nombre,tel); 
-       let compraRealizada ={buyer : {nombre: nombre , tel: tel, email: email},
-        CompraFinal: [{id:Cart.id, name: Cart.name, price: Cart.price}],total: CartTotal()};
-    }
-  return (
-     <div>
-        
-        <input value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="ingrese su nombre" type={'text'} />
-        <br/>
-        <input value={tel} onChange={(e) => setTel(e.target.value)} placeholder="ingrese su telefono" type={'text'} />
-        <br/>
-        <input value={email} onChange={(e) => setemail(e.target.value)} placeholder="ingrese su email" type={'text'} />
-        <br/>
-                
-        
-        <button className='btn btn-success'>Terminar compra</button>
-     </div>
-  )
-}*/}
